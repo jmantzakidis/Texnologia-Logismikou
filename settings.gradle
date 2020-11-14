@@ -1,0 +1,3 @@
+include ':deleteemployee'
+include ':app'
+rootProject.name = "Project-Texnologia-Logismikou"
