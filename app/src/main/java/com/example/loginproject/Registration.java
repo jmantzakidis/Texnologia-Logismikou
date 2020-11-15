@@ -3,6 +3,7 @@ package com.example.loginproject;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.annotation.SuppressLint;
+import android.content.Intent;
 import android.os.Bundle;
 import android.util.Log;
 import android.util.Patterns;
@@ -15,6 +16,7 @@ import android.widget.Toast;
 import com.basgeekball.awesomevalidation.AwesomeValidation;
 import com.basgeekball.awesomevalidation.ValidationStyle;
 import com.basgeekball.awesomevalidation.utility.RegexTemplate;
+
 
 public class Registration extends AppCompatActivity {
 
@@ -31,7 +33,7 @@ public class Registration extends AppCompatActivity {
         setContentView(R.layout.activity_registration);
 
         Spinner mySpinner = findViewById(R.id.spinner);
-        ArrayAdapter adapter = new ArrayAdapter(Registration.this,R.layout.spinner_test,getResources().getStringArray(R.array.Specialities));
+        ArrayAdapter<String> adapter = new ArrayAdapter<>(Registration.this, R.layout.spinner_test, getResources().getStringArray(R.array.Specialities));
         adapter.setDropDownViewResource(R.layout.spinner_dropdown_item);
         mySpinner.setAdapter(adapter);
 
@@ -62,8 +64,8 @@ public class Registration extends AppCompatActivity {
                 , ".{6,}",R.string.invalid_password);
         awesomeValidation.addValidation(this,R.id.et_confirm_password
                 ,R.id.et_password,R.string.invalid_confirm_password);
-        btSubmit.setOnClickListener(v -> {
 
+        btSubmit.setOnClickListener(v -> {
             if(awesomeValidation.validate()){
                 Toast.makeText(getApplicationContext(),"Form Registration Succefully...",Toast.LENGTH_SHORT).show();
                 etName.setText("");
@@ -73,6 +75,8 @@ public class Registration extends AppCompatActivity {
                 etUsername.setText("");
                 etPassword.setText("");
                 etConfirmPassword.setText("");
+                Intent intent = new Intent(Registration.this,BossActivity.class);
+                startActivity(intent);
             }else{
                 Toast.makeText(getApplicationContext(),"Registration Failed",Toast.LENGTH_SHORT).show();
             }
