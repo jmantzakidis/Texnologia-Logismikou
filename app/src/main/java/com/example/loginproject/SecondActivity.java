@@ -10,7 +10,7 @@ import android.widget.Button;
 public class SecondActivity extends AppCompatActivity {
 
     private Button employee;
-    private Button employer;
+    private Button Boss;
     private Button about;
     private Button exit;
 
@@ -21,7 +21,7 @@ public class SecondActivity extends AppCompatActivity {
         setContentView(R.layout.activity_second);
 
         employee =(Button) findViewById(R.id.employee);
-        employer =(Button) findViewById(R.id.employer);
+        Boss =(Button) findViewById(R.id.Boss);
         about = (Button) findViewById(R.id.AboutUs);
         exit = (Button) findViewById(R.id.exit);
 
@@ -39,5 +39,21 @@ public class SecondActivity extends AppCompatActivity {
                 System.exit(0);
             }
         });
+        Boss.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(SecondActivity.this,BossActivity.class);
+                startActivity(intent);
+            }
+        });
+        employee.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(SecondActivity.this,EmployeeActivity.class);
+                startActivity(intent);
+            }
+        });
+
+
     }
 }
