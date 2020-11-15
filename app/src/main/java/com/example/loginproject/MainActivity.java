@@ -2,6 +2,7 @@ package com.example.loginproject;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.annotation.SuppressLint;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
@@ -17,27 +18,23 @@ public class MainActivity extends AppCompatActivity {
     private Button Login;
     private int counter =5;
     @Override
+    @SuppressLint("SetTextI18n")
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-        //test
 
         Name = (EditText) findViewById(R.id.Name);
         Password = (EditText) findViewById(R.id.Password);
         info = (TextView) findViewById(R.id.info);
         Login = (Button) findViewById(R.id.Login);
-        info.setText("Number of Attemps remaining :5 ");
+        info.setText("Number of Attempts remaining :5 ");
 
-        Login.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                Validate(Name.getText().toString(), Password.getText().toString());
-
-            }
-        });
+        Login.setOnClickListener(v -> Validate(Name.getText().toString(), Password.getText().toString()));
     }
-    private void Validate(String username ,String passWord)
+
+    @SuppressLint("SetTextI18n")
+    private void Validate(String username , String passWord)
     {
         if(username.equals("Admin") && passWord.equals("1234"))
         {

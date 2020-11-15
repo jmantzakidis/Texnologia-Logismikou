@@ -14,15 +14,13 @@ public class AboutUs extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+        setTitle("About Us");
         setContentView(R.layout.activity_about_us);
 
         Back = findViewById(R.id.back);
-        Back.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                Intent intent = new Intent(AboutUs.this,SecondActivity.class);
-                startActivity(intent);
-            }
+        Back.setOnClickListener(v -> {
+            Intent intent = new Intent(AboutUs.this,SecondActivity.class);
+            startActivity(intent);
         });
     }
 }

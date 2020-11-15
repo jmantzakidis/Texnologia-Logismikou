@@ -25,33 +25,21 @@ public class SecondActivity extends AppCompatActivity {
         about = (Button) findViewById(R.id.AboutUs);
         exit = (Button) findViewById(R.id.exit);
 
-        about.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                Intent intent = new Intent(SecondActivity.this,AboutUs.class);
-                startActivity(intent);
-            }
+        about.setOnClickListener(v -> {
+            Intent intent = new Intent(SecondActivity.this,AboutUs.class);
+            startActivity(intent);
         });
-        exit.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                finish();
-                System.exit(0);
-            }
+        exit.setOnClickListener(v -> {
+            finish();
+            System.exit(0);
         });
-        Boss.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                Intent intent = new Intent(SecondActivity.this,BossActivity.class);
-                startActivity(intent);
-            }
+        Boss.setOnClickListener(v -> {
+            Intent intent = new Intent(SecondActivity.this,BossActivity.class);
+            startActivity(intent);
         });
-        employee.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                Intent intent = new Intent(SecondActivity.this,EmployeeActivity.class);
-                startActivity(intent);
-            }
+        employee.setOnClickListener(v -> {
+            Intent intent = new Intent(SecondActivity.this,EmployeeActivity.class);
+            startActivity(intent);
         });
 
 

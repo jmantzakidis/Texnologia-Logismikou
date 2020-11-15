@@ -14,6 +14,7 @@ public class BossActivity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+        setTitle("Boss Activity");
         setContentView(R.layout.activity_boss);
 
         hireButton = findViewById(R.id.hireButton);

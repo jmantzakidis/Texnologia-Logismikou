@@ -1,7 +1,6 @@
 package com.example.loginproject;
 
 import androidx.appcompat.app.AppCompatActivity;
-
 import android.annotation.SuppressLint;
 import android.content.Intent;
 import android.os.Bundle;
@@ -27,6 +26,7 @@ public class Registration extends AppCompatActivity {
 
     @SuppressLint("SetTextI18n")
     @Override
+
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setTitle("Registration Form");
