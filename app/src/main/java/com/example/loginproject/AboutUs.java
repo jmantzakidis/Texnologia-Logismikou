@@ -9,7 +9,7 @@ import android.widget.Button;
 
 public class AboutUs extends AppCompatActivity {
 
-    private Button Back;
+    private Button back;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -17,8 +17,8 @@ public class AboutUs extends AppCompatActivity {
         setTitle("About Us");
         setContentView(R.layout.activity_about_us);
 
-        Back = findViewById(R.id.back);
-        Back.setOnClickListener(v -> {
+        back = findViewById(R.id.back);
+        back.setOnClickListener(v -> {
             Intent intent = new Intent(AboutUs.this,SecondActivity.class);
             startActivity(intent);
         });

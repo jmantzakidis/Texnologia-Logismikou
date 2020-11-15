@@ -10,7 +10,7 @@ import android.widget.Button;
 public class SecondActivity extends AppCompatActivity {
 
     private Button employee;
-    private Button Boss;
+    private Button boss;
     private Button about;
     private Button exit;
 
@@ -18,12 +18,13 @@ public class SecondActivity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+        setTitle("Menu Option");
         setContentView(R.layout.activity_second);
 
-        employee =(Button) findViewById(R.id.employee);
-        Boss =(Button) findViewById(R.id.Boss);
-        about = (Button) findViewById(R.id.AboutUs);
-        exit = (Button) findViewById(R.id.exit);
+        employee = findViewById(R.id.employee);
+        boss = findViewById(R.id.Boss);
+        about = findViewById(R.id.AboutUs);
+        exit = findViewById(R.id.exit);
 
         about.setOnClickListener(v -> {
             Intent intent = new Intent(SecondActivity.this,AboutUs.class);
@@ -33,7 +34,7 @@ public class SecondActivity extends AppCompatActivity {
             finish();
             System.exit(0);
         });
-        Boss.setOnClickListener(v -> {
+        boss.setOnClickListener(v -> {
             Intent intent = new Intent(SecondActivity.this,BossActivity.class);
             startActivity(intent);
         });

@@ -16,11 +16,9 @@ public class BossActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setTitle("Boss Activity");
         setContentView(R.layout.activity_boss);
-
         hireButton = findViewById(R.id.hireButton);
 
         hireButton.setOnClickListener(v -> {
-
             Intent intent = new Intent(BossActivity.this,Registration.class);
             startActivity(intent);
         });

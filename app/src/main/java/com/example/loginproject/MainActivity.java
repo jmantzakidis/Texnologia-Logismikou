@@ -12,10 +12,10 @@ import android.widget.TextView;
 
 public class MainActivity extends AppCompatActivity {
 
-    private EditText Name;
-    private EditText Password;
+    private EditText name;
+    private EditText password;
     private TextView info;
-    private Button Login;
+    private Button login;
     private int counter =5;
     @Override
     @SuppressLint("SetTextI18n")
@@ -24,13 +24,13 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
 
 
-        Name = (EditText) findViewById(R.id.Name);
-        Password = (EditText) findViewById(R.id.Password);
+        name = (EditText) findViewById(R.id.Name);
+        password = (EditText) findViewById(R.id.Password);
         info = (TextView) findViewById(R.id.info);
-        Login = (Button) findViewById(R.id.Login);
+        login = (Button) findViewById(R.id.Login);
         info.setText("Number of Attempts remaining :5 ");
 
-        Login.setOnClickListener(v -> Validate(Name.getText().toString(), Password.getText().toString()));
+        login.setOnClickListener(v -> Validate(name.getText().toString(), password.getText().toString()));
     }
 
     @SuppressLint("SetTextI18n")
@@ -47,7 +47,7 @@ public class MainActivity extends AppCompatActivity {
             info.setText("No of attempts remaining "+String.valueOf(counter));
             if(counter == 0)
             {
-                Login.setEnabled(false);
+                login.setEnabled(false);
             }
         }
     }
