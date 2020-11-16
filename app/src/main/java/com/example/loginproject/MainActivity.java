@@ -24,10 +24,10 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
 
 
-        name = (EditText) findViewById(R.id.Name);
-        password = (EditText) findViewById(R.id.Password);
-        info = (TextView) findViewById(R.id.info);
-        login = (Button) findViewById(R.id.Login);
+        name = findViewById(R.id.Name);
+        password = findViewById(R.id.Password);
+        info = findViewById(R.id.info);
+        login = findViewById(R.id.Login);
         info.setText("Number of Attempts remaining :5 ");
 
         login.setOnClickListener(v -> Validate(name.getText().toString(), password.getText().toString()));
@@ -44,7 +44,7 @@ public class MainActivity extends AppCompatActivity {
         else
         {
             counter--;
-            info.setText("No of attempts remaining "+String.valueOf(counter));
+            info.setText("Number of attempts remaining "+String.valueOf(counter));
             if(counter == 0)
             {
                 login.setEnabled(false);

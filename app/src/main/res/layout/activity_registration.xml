@@ -10,6 +10,7 @@
     android:background="@color/light_pink"
     tools:context=".Registration" >
 
+
     <EditText
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
