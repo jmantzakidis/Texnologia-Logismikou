@@ -5,7 +5,6 @@ import androidx.appcompat.app.AppCompatActivity;
 import android.annotation.SuppressLint;
 import android.content.Intent;
 import android.os.Bundle;
-import android.util.Log;
 import android.util.Patterns;
 import android.widget.ArrayAdapter;
 import android.widget.Button;
@@ -24,6 +23,7 @@ public class Registration extends AppCompatActivity {
     Button btSubmit;
     AwesomeValidation awesomeValidation;
     TextView tv_Specialities;
+
 
     @SuppressLint("SetTextI18n")
     @Override
@@ -69,6 +69,17 @@ public class Registration extends AppCompatActivity {
         btSubmit.setOnClickListener(v -> {
             if(awesomeValidation.validate()){
                 Toast.makeText(getApplicationContext(),"Form Registration Succefully...",Toast.LENGTH_SHORT).show();
+                String spinner = mySpinner.getSelectedItem().toString();
+                UserData parseData = new UserData(etName.getText().toString(),
+                        etSurname.getText().toString(),etEmail.getText().toString(),
+                        etUsername.getText().toString(),etMobile.getText().toString(),
+                        etPassword.getText().toString(),spinner);
+                DataWriter newDataWriter = new DataWriter();
+                try {
+                    newDataWriter.writeToJson(parseData,getApplicationContext());
+                }catch (Exception e){
+                    System.out.println(e);
+                }
                 etName.setText("");
                 etSurname.setText("");
                 etMobile.setText("");

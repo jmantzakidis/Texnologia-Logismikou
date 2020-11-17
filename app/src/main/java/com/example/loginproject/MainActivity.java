@@ -30,6 +30,8 @@ public class MainActivity extends AppCompatActivity {
         login = findViewById(R.id.Login);
         info.setText("Number of Attempts remaining :5 ");
 
+        Intent intent = new Intent(MainActivity.this,Registration.class);
+        startActivity(intent);
         login.setOnClickListener(v -> Validate(name.getText().toString(), password.getText().toString()));
     }
 
