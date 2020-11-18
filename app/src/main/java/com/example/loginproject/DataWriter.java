@@ -5,7 +5,6 @@ import android.util.JsonWriter;
 
 import androidx.appcompat.app.AppCompatActivity;
 
-import com.google.firebase.firestore.auth.User;
 import org.json.JSONArray;
 import org.json.JSONException;
 import org.json.JSONObject;
@@ -18,34 +17,23 @@ import java.io.FileWriter;
 import java.io.IOException;
 import java.io.OutputStream;
 import java.io.OutputStreamWriter;
+import java.util.ArrayList;
 
-public class DataWriter {
+public class DataWriter{
 
-    private String filePath = Util.directory;
-    private String fileName = Util.fileName;
+    private final String filePath = Util.directory;
+    private final String fileName = Util.fileName;
 
-    public void writeToJson(UserData userData,Context context) throws IOException, JSONException {
-        File jsonDir = new File(context.getFilesDir(),filePath);
-        File fileJson = new File(jsonDir,fileName);
-        if(!jsonDir.exists()) {
-            jsonDir.mkdir();
-            fileJson.createNewFile();
-            //File fileJson = new File(jsonDir,fileName);
-        }
-        fileJson.createNewFile();
-        BufferedReader bufferedReader = new BufferedReader(new FileReader(fileJson));
-        StringBuilder builder = new StringBuilder();
-        String line = null;
+    public void writeToJson(UserData userData) throws IOException, JSONException {
+
+        Util util = new Util();
+        String jsonString = util.jsonLoader(filePath,fileName);
         JSONArray dataArray = null;
         JSONObject newObject = null;
         JSONObject tempJSONObject = new JSONObject();
 
-        while ((line = bufferedReader.readLine()) != null) {
-            builder.append(line).append("\n");
-        }
-        bufferedReader.close();
-        if(builder.length()>0) {
-            JSONObject jsonObject = new JSONObject(builder.toString());
+        if(jsonString.length()>0) {
+            JSONObject jsonObject = new JSONObject(jsonString);
             JSONArray oldArray = jsonObject.getJSONArray("Registrations");
             newObject = new JSONObject();
             newObject.put("name",userData.name);
@@ -70,12 +58,27 @@ public class DataWriter {
             dataArray.put(newObject);
             tempJSONObject.put("Registrations",dataArray);
         }
-
-        BufferedWriter bufferedWriter = new BufferedWriter(new FileWriter(fileJson));
-        bufferedWriter.write(tempJSONObject.toString());
-        bufferedWriter.close();
-
+        util.jsonWriter(tempJSONObject,filePath,fileName);
     }
+    public void writeToJson(ArrayList<UserData> userData) throws IOException, JSONException{
+        Util util = new Util();
+        JSONArray dataArray = new JSONArray();
+        JSONObject newObject = null;
+        JSONObject tempJSONObject = new JSONObject();
+        for(UserData user : userData){
+            newObject = new JSONObject();
+            newObject.put("name",user.name);
+            newObject.put("surName",user.surName);
+            newObject.put("email",user.email);
+            newObject.put("userName",user.userName);
+            newObject.put("mobile",user.mobile);
+            newObject.put("password",user.password);
+            newObject.put("specialty",user.specialty);
+            dataArray.put(newObject);
+        }
+        tempJSONObject.put("Registrations",dataArray);
+        util.jsonWriter(tempJSONObject,filePath,fileName);
     }
+}
 
 

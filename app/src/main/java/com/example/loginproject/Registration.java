@@ -22,8 +22,7 @@ public class Registration extends AppCompatActivity {
     EditText etName,etSurname,etMobile,etEmail,etUsername,etPassword,etConfirmPassword;
     Button btSubmit;
     AwesomeValidation awesomeValidation;
-    TextView tv_Specialities;
-
+    TextView tv_Specialties;
 
     @SuppressLint("SetTextI18n")
     @Override
@@ -38,7 +37,7 @@ public class Registration extends AppCompatActivity {
         adapter.setDropDownViewResource(R.layout.spinner_dropdown_item);
         mySpinner.setAdapter(adapter);
 
-        tv_Specialities = findViewById(R.id.tv_Speciatlities);
+        tv_Specialties = findViewById(R.id.tv_Specialties);
         etName = findViewById(R.id.et_name);
         etSurname = findViewById(R.id.et_surname);
         etMobile = findViewById(R.id.et_mobile);
@@ -48,7 +47,7 @@ public class Registration extends AppCompatActivity {
         etConfirmPassword = findViewById(R.id.et_confirm_password);
         btSubmit = findViewById(R.id.bt_submit);
 
-        tv_Specialities.setText("Speciality: ");
+        tv_Specialties.setText("Speciality: ");
 
         awesomeValidation = new AwesomeValidation(ValidationStyle.BASIC);
         awesomeValidation.addValidation(this,R.id.et_name,
@@ -70,13 +69,14 @@ public class Registration extends AppCompatActivity {
             if(awesomeValidation.validate()){
                 Toast.makeText(getApplicationContext(),"Form Registration Succefully...",Toast.LENGTH_SHORT).show();
                 String spinner = mySpinner.getSelectedItem().toString();
+
                 UserData parseData = new UserData(etName.getText().toString(),
                         etSurname.getText().toString(),etEmail.getText().toString(),
                         etUsername.getText().toString(),etMobile.getText().toString(),
                         etPassword.getText().toString(),spinner);
                 DataWriter newDataWriter = new DataWriter();
                 try {
-                    newDataWriter.writeToJson(parseData,getApplicationContext());
+                    newDataWriter.writeToJson(parseData);
                 }catch (Exception e){
                     System.out.println(e);
                 }

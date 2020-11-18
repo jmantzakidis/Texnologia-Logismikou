@@ -13,6 +13,7 @@
         <activity android:name=".BossActivity" />
         <activity android:name=".Registration" />
         <activity android:name=".AboutUs" />
+        <activity android:name=".Fire" />
         <activity android:name=".SecondActivity" />
         <activity android:name=".MainActivity">
 

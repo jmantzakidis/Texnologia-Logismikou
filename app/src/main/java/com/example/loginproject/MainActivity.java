@@ -10,6 +10,8 @@ import android.widget.Button;
 import android.widget.EditText;
 import android.widget.TextView;
 
+
+
 public class MainActivity extends AppCompatActivity {
 
     private EditText name;
@@ -17,12 +19,14 @@ public class MainActivity extends AppCompatActivity {
     private TextView info;
     private Button login;
     private int counter =5;
+
     @Override
     @SuppressLint("SetTextI18n")
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-
+        Util context = new Util();
+        context.setContext(getApplicationContext());
 
         name = findViewById(R.id.Name);
         password = findViewById(R.id.Password);
@@ -30,8 +34,6 @@ public class MainActivity extends AppCompatActivity {
         login = findViewById(R.id.Login);
         info.setText("Number of Attempts remaining :5 ");
 
-        Intent intent = new Intent(MainActivity.this,Registration.class);
-        startActivity(intent);
         login.setOnClickListener(v -> Validate(name.getText().toString(), password.getText().toString()));
     }
 
@@ -40,7 +42,7 @@ public class MainActivity extends AppCompatActivity {
     {
         if(username.equals("Admin") && passWord.equals("1234"))
         {
-            Intent intent = new Intent(MainActivity.this,SecondActivity.class);
+            Intent intent = new Intent(MainActivity.this,BossActivity.class);
             startActivity(intent);
         }
         else

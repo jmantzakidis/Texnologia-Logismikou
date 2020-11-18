@@ -42,7 +42,5 @@ public class SecondActivity extends AppCompatActivity {
             Intent intent = new Intent(SecondActivity.this,EmployeeActivity.class);
             startActivity(intent);
         });
-
-
     }
 }
