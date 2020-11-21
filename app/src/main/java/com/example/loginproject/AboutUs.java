@@ -11,6 +11,11 @@ public class AboutUs extends AppCompatActivity {
 
     private Button back;
 
+    /**
+     * This activity shows some information about the programmers
+     * @param savedInstanceState
+     * using Button back
+     */
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);

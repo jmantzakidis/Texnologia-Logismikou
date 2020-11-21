@@ -18,6 +18,11 @@ public class Fire extends AppCompatActivity {
 
     ArrayList<UserData> data;
 
+    /**
+     * We can fire employees
+     * @param savedInstanceState
+     * using ArrayList data to delete employees from json file
+     */
     @Override
     @SuppressLint("SetTextI18n")
     protected void onCreate(Bundle savedInstanceState) {
