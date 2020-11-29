@@ -13,7 +13,7 @@ import android.widget.TextView;
 
 
 public class MainActivity extends AppCompatActivity {
-
+//comment for branch creation
     private EditText name;
     private EditText password;
     private TextView info;
@@ -36,6 +36,7 @@ public class MainActivity extends AppCompatActivity {
 
         login.setOnClickListener(v -> Validate(name.getText().toString(), password.getText().toString()));
     }
+
 
     @SuppressLint("SetTextI18n")
     private void Validate(String username , String passWord)
