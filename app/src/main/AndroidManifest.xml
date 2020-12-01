@@ -11,6 +11,7 @@
         android:theme="@style/Theme.LoginProject">
         <activity android:name=".CalendarActivity"></activity>
         <activity android:name=".CalendarView" />
+        <activity android:name=".Restrictions"></activity>
         <activity android:name=".EmployeeActivity" />
         <activity android:name=".BossActivity" />
         <activity android:name=".Registration" />
