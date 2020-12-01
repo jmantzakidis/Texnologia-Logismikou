@@ -13,7 +13,7 @@ import android.widget.TextView;
 
 
 public class MainActivity extends AppCompatActivity {
-
+//test
     private EditText name;
     private EditText password;
     private TextView info;
