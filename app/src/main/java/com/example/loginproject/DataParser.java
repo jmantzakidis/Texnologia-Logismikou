@@ -2,11 +2,9 @@ package com.example.loginproject;
 
 import android.os.Build;
 
-
 import org.json.JSONArray;
 import org.json.JSONException;
 import org.json.JSONObject;
-
 import java.util.ArrayList;
 
 public class DataParser {
