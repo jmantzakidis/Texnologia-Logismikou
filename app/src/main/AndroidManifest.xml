@@ -9,7 +9,9 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.LoginProject">
-        <activity android:name=".CalendarActivity"></activity>
+        <activity android:name=".notification2"></activity>
+        <activity android:name=".notification" />
+        <activity android:name=".CalendarActivity" />
         <activity android:name=".CalendarView" />
         <activity android:name=".EmployeeActivity" />
         <activity android:name=".BossActivity" />
