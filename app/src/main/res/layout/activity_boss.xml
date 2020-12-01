@@ -8,7 +8,7 @@
     tools:context=".BossActivity">
 
     <Button
-        android:id="@+id/create2"
+        android:id="@+id/Restrictions"
         android:layout_width="148dp"
         android:layout_height="65dp"
         android:text="Restrictions"
@@ -18,7 +18,7 @@
         app:layout_constraintHorizontal_bias="0.114"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.527" />
+        app:layout_constraintVertical_bias="0.525" />
 
     <Button
         android:id="@+id/Exit"

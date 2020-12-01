@@ -9,7 +9,7 @@ import android.widget.Button;
 
 public class BossActivity extends AppCompatActivity {
 
-    Button hireButton,fireButton;
+    Button hireButton,fireButton,restrictions;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -18,6 +18,7 @@ public class BossActivity extends AppCompatActivity {
         setContentView(R.layout.activity_boss);
         hireButton = findViewById(R.id.hireButton);
         fireButton = findViewById(R.id.fire);
+        //restrictions=findViewById(R.id.restrict);
 
         fireButton.setOnClickListener(v -> {
             Intent intent = new Intent(BossActivity.this,Fire.class);
@@ -28,5 +29,12 @@ public class BossActivity extends AppCompatActivity {
             Intent intent = new Intent(BossActivity.this,Registration.class);
             startActivity(intent);
         });
+
+//        restrictions.setOnClickListener(v ->{
+//            Intent intent = new Intent(BossActivity.this,Restrictions.class);
+//            startActivity(intent);
+        //ασδαδσαδσασ
+//        });
+
     }
 }
