@@ -28,7 +28,17 @@ public class BossActivity extends AppCompatActivity {
         notify = findViewById(R.id.notify);
         create = findViewById(R.id.create);
         view = findViewById(R.id.view);
-        showEmployees = findViewById(R.id.showEmployees);
+
+
+        restrictions.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(BossActivity.this,Restrictions.class);
+                startActivity(intent);
+            }
+        });
+
+
 
 /**
  * This listener creates a new activity that give us the option to fire employees
