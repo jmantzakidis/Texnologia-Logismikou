@@ -36,20 +36,32 @@ public class MainActivity extends AppCompatActivity {
 
         login.setOnClickListener(v -> Validate(name.getText().toString(), password.getText().toString()));
     }
-
+    /**
+     *  Function Validate that checking if the user puts the correct username and password to connect .
+     * counter  that has the number of the remaining attempts.
+     * @param   username  stores the username that user is giving  to the login activity
+     * @param  passWord  stores  the password that user is giving to  the login activity.
+     */
     @SuppressLint("SetTextI18n")
     private void Validate(String username , String passWord)
     {
+
         if(username.equals("Admin") && passWord.equals("1234"))
         {
-            Intent intent = new Intent(MainActivity.this,BossActivity.class);
+            Intent intent = new Intent(MainActivity.this, BossActivity.class);
+            startActivity(intent);
+
+        }
+        else if(username.equals("Employee") && passWord.equals("1234") )
+        {
+            Intent intent = new Intent(MainActivity.this,EmployeeActivity.class);
             startActivity(intent);
         }
         else
-        {
+            {
             counter--;
-            info.setText("Number of attempts remaining "+String.valueOf(counter));
-            if(counter == 0)
+            info.setText("Number of attempts remaining " + String.valueOf(counter));
+            if (counter == 0)
             {
                 login.setEnabled(false);
             }
