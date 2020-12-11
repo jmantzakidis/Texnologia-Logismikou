@@ -37,7 +37,6 @@ public class UserDataAdapter extends RecyclerView.Adapter<UserDataAdapter.ViewHo
         ViewHolder viewHolder = new ViewHolder(userDataView);
         return viewHolder;
     }
-//ttes
     @SuppressLint("SetTextI18n")
     @Override
     public void onBindViewHolder(ViewHolder holder, int position) {

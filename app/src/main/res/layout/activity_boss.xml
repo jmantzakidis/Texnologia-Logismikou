@@ -73,6 +73,19 @@
         app:layout_constraintVertical_bias="0.143" />
 
     <Button
+        android:id="@+id/showEmployees"
+        android:layout_width="159dp"
+        android:layout_height="64dp"
+        android:text="View Employees"
+        app:backgroundTint="@color/teal_700"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.119"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.529" />
+
+    <Button
         android:id="@+id/fire"
         android:layout_width="100dp"
         android:layout_height="wrap_content"
