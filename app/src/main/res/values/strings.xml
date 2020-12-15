@@ -11,6 +11,18 @@
     <string-array name="Specialities">
         <item>Plumber</item>
         <item>Electrician</item>
-        <item>Σουβλατζής</item>
+        <item>Mechanic</item>
     </string-array>
+
+    <string-array name="Contract">
+        <item>Full-Time</item>
+        <item>Part-Time</item>
+    </string-array>
+
+    <string-array name="Shifts">
+        <item>Morning</item>
+        <item>Afternoon</item>
+        <item>Night</item>
+    </string-array>
+
 </resources>

@@ -82,10 +82,15 @@
         android:layout_marginTop="10dp"
         android:background="@android:color/white" />
 
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:orientation="vertical">
 
     <LinearLayout
-        android:layout_width="368dp"
-        android:layout_height="92dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
         android:layout_marginTop="20dp"
         android:orientation="horizontal">
 
@@ -109,6 +114,35 @@
             android:textColor="@color/design_default_color_secondary"
             android:textSize="20sp" />
 
+    </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:orientation="horizontal">
+
+            <TextView
+                android:id="@+id/tv_contract"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginRight="20dp"
+                android:fontFamily="@font/roboto_thin"
+                android:textSize="28sp"
+                android:textStyle="bold"
+                tools:text="Contract"
+                android:textColor="#4D6466"/>
+
+            <Spinner
+                android:id="@+id/spinner1"
+                android:layout_width="199dp"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="33dp"
+                android:spinnerMode="dialog"
+                android:textColor="@color/design_default_color_secondary"
+                android:textSize="20sp" />
+
+        </LinearLayout>
 
     </LinearLayout>
 

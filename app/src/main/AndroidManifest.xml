@@ -9,16 +9,20 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.LoginProject">
-        <activity android:name=".EmployeeActivity"/>
+        <activity android:name=".EmptyScheduleShiftActivity"></activity>
+        <activity android:name=".CreateEmptySchedule" />
+        <activity android:name=".ShiftActivity" />
+        <activity android:name=".Schedule" />
+        <activity android:name=".EmployeeActivity" />
         <activity android:name=".BossActivity" />
         <activity android:name=".Registration" />
         <activity android:name=".AboutUs" />
         <activity android:name=".Fire" />
         <activity android:name=".SecondActivity" />
         <activity android:name=".MainActivity">
-
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
+
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>

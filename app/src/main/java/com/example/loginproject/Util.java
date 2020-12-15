@@ -7,7 +7,6 @@ import androidx.appcompat.app.AppCompatActivity;
 import org.json.JSONArray;
 import org.json.JSONException;
 import org.json.JSONObject;
-
 import java.io.BufferedReader;
 import java.io.BufferedWriter;
 import java.io.File;
@@ -15,13 +14,21 @@ import java.io.FileNotFoundException;
 import java.io.FileReader;
 import java.io.FileWriter;
 import java.io.IOException;
+import java.util.ArrayList;
 
 public class Util {
 
     public static String directory = "userData";
     public static String fileName ="userData.json";
+    public static String shiftsFileName ="shifts.json";
+    public static String shiftsDirectory = "shifts";
     public static Context context;
     public static AppCompatActivity currentActivity;
+    public static String MORNING_SHIFT = "morning";
+    public static String AFTERNOON_SHIFT = "afternoon";
+    public static String NIGHT_SHIFT = "night";
+    public static UserData currentUser;
+    public static ArrayList<WorkDay> days;
 
     public void setContext(Context context){
         this.context = context;

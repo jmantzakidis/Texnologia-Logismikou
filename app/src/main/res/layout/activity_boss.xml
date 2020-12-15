@@ -89,12 +89,24 @@
         android:id="@+id/textView6"
         android:layout_width="130dp"
         android:layout_height="20dp"
-        android:text="Boss Options"
+        android:text="Admin Options"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.456"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.078" />
+
+    <Button
+        android:id="@+id/createEmptySchedule"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Create Empty Schedule"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:backgroundTint="@color/teal_700"
+        app:layout_constraintVertical_bias="0.551" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

@@ -22,7 +22,7 @@ public class Registration extends AppCompatActivity {
     EditText etName,etSurname,etMobile,etEmail,etUsername,etPassword,etConfirmPassword;
     Button btSubmit;
     AwesomeValidation awesomeValidation;
-    TextView tv_Specialties;
+    TextView tv_Specialties,etContract;
 
     @SuppressLint("SetTextI18n")
     @Override
@@ -37,6 +37,11 @@ public class Registration extends AppCompatActivity {
         adapter.setDropDownViewResource(R.layout.spinner_dropdown_item);
         mySpinner.setAdapter(adapter);
 
+        Spinner mySpinner1 = findViewById(R.id.spinner1);
+        ArrayAdapter<String> adapter1 = new ArrayAdapter<>(Registration.this, R.layout.spinner_test, getResources().getStringArray(R.array.Contract));
+        adapter1.setDropDownViewResource(R.layout.spinner_dropdown_item);
+        mySpinner1.setAdapter(adapter1);
+
         tv_Specialties = findViewById(R.id.tv_Specialties);
         etName = findViewById(R.id.et_name);
         etSurname = findViewById(R.id.et_surname);
@@ -46,8 +51,10 @@ public class Registration extends AppCompatActivity {
         etPassword = findViewById(R.id.et_password);
         etConfirmPassword = findViewById(R.id.et_confirm_password);
         btSubmit = findViewById(R.id.bt_submit);
+        etContract = findViewById(R.id.tv_contract);
 
         tv_Specialties.setText("Speciality: ");
+        etContract.setText("Contract:");
 
         awesomeValidation = new AwesomeValidation(ValidationStyle.BASIC);
         awesomeValidation.addValidation(this,R.id.et_name,
@@ -69,11 +76,12 @@ public class Registration extends AppCompatActivity {
             if(awesomeValidation.validate()){
                 Toast.makeText(getApplicationContext(),"Form Registration Succefully...",Toast.LENGTH_SHORT).show();
                 String spinner = mySpinner.getSelectedItem().toString();
+                String spinner1 = mySpinner1.getSelectedItem().toString();
 
                 UserData parseData = new UserData(etName.getText().toString(),
                         etSurname.getText().toString(),etEmail.getText().toString(),
                         etUsername.getText().toString(),etMobile.getText().toString(),
-                        etPassword.getText().toString(),spinner);
+                        etPassword.getText().toString(),spinner,spinner1);
                 DataWriter newDataWriter = new DataWriter();
                 try {
                     newDataWriter.writeToJson(parseData);
