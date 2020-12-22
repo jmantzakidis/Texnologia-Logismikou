@@ -9,7 +9,8 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.LoginProject">
-        <activity android:name=".EmptyScheduleShiftActivity"></activity>
+        <activity android:name=".ViewEmployee"></activity>
+        <activity android:name=".EmptyScheduleShiftActivity" />
         <activity android:name=".CreateEmptySchedule" />
         <activity android:name=".ShiftActivity" />
         <activity android:name=".Schedule" />

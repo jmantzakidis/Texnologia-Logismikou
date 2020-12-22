@@ -58,11 +58,6 @@ public class WeekDayAdapter extends RecyclerView.Adapter<WeekDayAdapter.ViewHold
             } catch (IOException e) {
                 e.printStackTrace();
             }
-//            Intent intent = new Intent(Util.currentActivity,ShiftActivity.class);
-//            intent.putParcelableArrayListExtra("shifts",d.getShifts());
-//            intent.putParcelableArrayListExtra("days",days);
-//            intent.putExtra("position",position);
-//            Util.currentActivity.startActivity(intent);
         });
     }
 
