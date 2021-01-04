@@ -28,6 +28,7 @@ public class DataParser {
             tempData.password = temp.getString("password");
             tempData.specialty = temp.getString("specialty");
             tempData.contract = temp.getString("contract");
+            tempData.daysWorked = temp.getInt("daysWorked");
             registrationData.add(tempData);
         }
         return registrationData;

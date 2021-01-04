@@ -49,7 +49,6 @@ public class ViewEmployeeAdapter extends RecyclerView.Adapter<ViewEmployeeAdapte
         textViewSurname.setText(userData.surName);
         TextView textViewContract = holder.tv_contract;
         textViewContract.setText(" " +" "+" "+ " " +" " + userData.contract);
-
     }
 
     @Override

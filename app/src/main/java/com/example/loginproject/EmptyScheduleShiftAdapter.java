@@ -58,7 +58,8 @@ public class EmptyScheduleShiftAdapter extends RecyclerView.Adapter<EmptySchedul
             } catch (JSONException e) {
                 e.printStackTrace();
             }
-            Util.currentActivity.recreate();
+//            Util.currentActivity.recreate();
+            this.notifyDataSetChanged();
         });
     }
 

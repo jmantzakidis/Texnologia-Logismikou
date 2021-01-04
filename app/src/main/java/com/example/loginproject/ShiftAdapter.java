@@ -23,6 +23,7 @@ public class ShiftAdapter extends RecyclerView.Adapter<ShiftAdapter.ViewHolder> 
     private ArrayList<WorkDay> days;
     private int p;
 
+
     public ShiftAdapter(ArrayList<Shift> shifts,ArrayList<WorkDay> days,int p) {
         this.shifts = shifts;
         this.days = days;
@@ -51,11 +52,25 @@ public class ShiftAdapter extends RecyclerView.Adapter<ShiftAdapter.ViewHolder> 
         }else
         holder.tv_employee.setText(shift.getEmployeeName());
         holder.bt_apply.setOnClickListener(v -> {
+
+
             Restrictions restriction = new Restrictions();
-            if(!restriction.checkDays(p,days,days.get(p).shifts.get(position).shift))
-            {
-                return;
+            int returnCode = restriction.checkDays(p,days,days.get(p).shifts.get(position).shift);
+            switch (returnCode){
+                case Restrictions.SUCCESS_CODE:
+                    Toast.makeText(Util.context,Restrictions.SUCCESS_APPLY,Toast.LENGTH_SHORT).show();
+                    break;
+                case Restrictions.DOUBLE_SHIFT_CODE:
+                    Toast.makeText(Util.context,Restrictions.DOUBLE_SHIFT,Toast.LENGTH_SHORT).show();
+                    return;
+                case Restrictions.SAME_DAY_CODE:
+                    Toast.makeText(Util.context,Restrictions.SAME_DAY_MESSAGE,Toast.LENGTH_SHORT).show();
+                    return;
             }
+//            if(!restriction.checkDays(p,days,days.get(p).shifts.get(position).shift))
+//            {
+//                return;
+//            }
             shifts.get(position).employeeName = Util.currentUser.name + " " +Util.currentUser.surName;
             days.get(p).shifts = shifts;
             DataWriter dataWriter = new DataWriter(Util.shiftsDirectory,Util.shiftsFileName);
@@ -67,7 +82,7 @@ public class ShiftAdapter extends RecyclerView.Adapter<ShiftAdapter.ViewHolder> 
                 e.printStackTrace();
             }
             holder.bt_apply.setEnabled(false);
-            Util.currentActivity.recreate();
+            this.notifyDataSetChanged();
 
         });
         if(!shift.employeeName.equals("")){

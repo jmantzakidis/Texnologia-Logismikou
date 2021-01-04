@@ -53,7 +53,9 @@ public class EmptyScheduleShiftActivity extends AppCompatActivity {
             } catch (JSONException e) {
                 e.printStackTrace();
             }
+
             Util.currentActivity.recreate();
+
         });
 
         EmptyScheduleShiftAdapter adapter = new EmptyScheduleShiftAdapter(shifts,days,p);

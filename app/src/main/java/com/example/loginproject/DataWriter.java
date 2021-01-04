@@ -55,6 +55,7 @@ public class DataWriter{
             newObject.put("password",userData.password);
             newObject.put("specialty",userData.specialty);
             newObject.put("contract",userData.contract);
+            newObject.put("daysWorked",userData.daysWorked);
             oldArray.put(newObject);
             tempJSONObject.put("Registrations",oldArray);
         }else {
@@ -67,6 +68,7 @@ public class DataWriter{
             newObject.put("password",userData.password);
             newObject.put("specialty",userData.specialty);
             newObject.put("contract",userData.contract);
+            newObject.put("daysWorked",userData.daysWorked);
             dataArray = new JSONArray();
             dataArray.put(newObject);
             tempJSONObject.put("Registrations",dataArray);
@@ -88,6 +90,7 @@ public class DataWriter{
             newObject.put("password",user.password);
             newObject.put("specialty",user.specialty);
             newObject.put("contract",user.contract);
+            newObject.put("daysWorked",user.daysWorked);
             dataArray.put(newObject);
         }
         tempJSONObject.put("Registrations",dataArray);

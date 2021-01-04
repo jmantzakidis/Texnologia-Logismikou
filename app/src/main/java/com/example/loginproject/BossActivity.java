@@ -26,8 +26,8 @@ public class BossActivity extends AppCompatActivity {
 
 
         finalizeSchedule.setOnClickListener(v -> {
-
-
+            Intent intent = new Intent(BossActivity.this,FinalizedSchedule.class);
+            startActivity(intent);
         });
 
         fireButton.setOnClickListener(v -> {

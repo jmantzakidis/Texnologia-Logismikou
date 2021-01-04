@@ -81,7 +81,7 @@ public class Registration extends AppCompatActivity {
                 UserData parseData = new UserData(etName.getText().toString(),
                         etSurname.getText().toString(),etEmail.getText().toString(),
                         etUsername.getText().toString(),etMobile.getText().toString(),
-                        etPassword.getText().toString(),spinner,spinner1);
+                        etPassword.getText().toString(),spinner,spinner1,0);
                 DataWriter newDataWriter = new DataWriter();
                 try {
                     newDataWriter.writeToJson(parseData);
