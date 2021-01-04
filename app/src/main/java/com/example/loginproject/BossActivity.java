@@ -9,18 +9,26 @@ import android.widget.Button;
 
 public class BossActivity extends AppCompatActivity {
 
-    Button hireButton,fireButton,createEmptySchedule,viewSchedule,viewEmployees;
+    Button hireButton,fireButton,createEmptySchedule,viewSchedule,viewEmployees,finalizeSchedule;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setTitle("Admin Activity");
+        setTitle("Admin Menu");
         setContentView(R.layout.activity_boss);
         hireButton = findViewById(R.id.hireButton);
         fireButton = findViewById(R.id.fire);
         createEmptySchedule = findViewById(R.id.createEmptySchedule);
-//        viewSchedule = findViewById(R.id.view);
         viewEmployees = findViewById(R.id.viewEmployees);
+        viewSchedule = findViewById(R.id.ViewSchedule);
+        finalizeSchedule = findViewById(R.id.FinalizeSchedule);
+
+
+
+        finalizeSchedule.setOnClickListener(v -> {
+
+
+        });
 
         fireButton.setOnClickListener(v -> {
             Intent intent = new Intent(BossActivity.this,Fire.class);
@@ -42,11 +50,11 @@ public class BossActivity extends AppCompatActivity {
             startActivity(intent);
         });
 
+        viewSchedule.setOnClickListener(v -> {
+            Intent intent = new Intent(BossActivity.this,ViewSchedule.class);
+            startActivity(intent);
+        });
 
-//        viewSchedule.setOnClickListener(v -> {
-//            Intent intent = new Intent(BossActivity.this,ViewSchedule.class);
-//            startActivity(intent);
-//        });
 
     }
 }

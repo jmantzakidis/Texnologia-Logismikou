@@ -24,7 +24,7 @@ public class EmptyScheduleShiftActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_empty_schedule_shift);
-
+        setTitle("Program Creator");
         Util.currentActivity = this;
         Intent intent = getIntent();
         int p = intent.getIntExtra("position",-1);

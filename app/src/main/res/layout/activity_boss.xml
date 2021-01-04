@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
@@ -47,10 +48,10 @@
         app:layout_constraintVertical_bias="0.285" />
 
     <Button
-        android:id="@+id/create"
-        android:layout_width="100dp"
+        android:id="@+id/ViewSchedule"
+        android:layout_width="120dp"
         android:layout_height="wrap_content"
-        android:text="Create"
+        android:text="View Schedule"
         app:backgroundTint="@color/teal_700"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
@@ -60,17 +61,30 @@
         app:layout_constraintVertical_bias="0.144" />
 
     <Button
-        android:id="@+id/viewEmployees"
-        android:layout_width="100dp"
+        android:id="@+id/FinalizeSchedule"
+        android:layout_width="120dp"
         android:layout_height="wrap_content"
-        android:text="View"
+        android:text="Finalize Schedule"
         app:backgroundTint="@color/teal_700"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.773"
+        app:layout_constraintHorizontal_bias="0.828"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.143" />
+
+    <Button
+        android:id="@+id/viewEmployees"
+        android:layout_width="120dp"
+        android:layout_height="wrap_content"
+        android:text="View Employee"
+        app:backgroundTint="@color/teal_700"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.103"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.567" />
 
     <Button
         android:id="@+id/fire"
@@ -102,11 +116,12 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Create Empty Schedule"
+        app:backgroundTint="@color/teal_700"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.983"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:backgroundTint="@color/teal_700"
-        app:layout_constraintVertical_bias="0.551" />
+        app:layout_constraintVertical_bias="0.572" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

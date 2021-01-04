@@ -3,12 +3,15 @@ package com.example.loginproject;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
+
 import android.os.Bundle;
+
 import org.json.JSONException;
+
 import java.io.IOException;
 import java.util.ArrayList;
 
-public class Schedule extends AppCompatActivity {
+public class ViewSchedule extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -35,15 +38,9 @@ public class Schedule extends AppCompatActivity {
         } catch (JSONException e) {
             e.printStackTrace();
         }
-//        RecyclerView dayData = findViewById(R.id.dayData);
-//        ViewScheduleAdapter adapter = new ViewScheduleAdapter(day);
-//        dayData.setAdapter(adapter);
-//        dayData.setLayoutManager(new LinearLayoutManager(this));
-
         RecyclerView dayData = findViewById(R.id.dayData);
-        WeekDayAdapter adapter = new WeekDayAdapter(day);
+        ViewScheduleAdapter adapter = new ViewScheduleAdapter(day);
         dayData.setAdapter(adapter);
         dayData.setLayoutManager(new LinearLayoutManager(this));
-        
     }
 }

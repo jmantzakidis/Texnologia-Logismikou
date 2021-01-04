@@ -5,6 +5,9 @@ import androidx.appcompat.app.AppCompatActivity;
 import android.content.Intent;
 import android.os.Bundle;
 import android.widget.Button;
+import org.json.JSONException;
+import java.io.IOException;
+import java.util.ArrayList;
 
 public class EmployeeActivity extends AppCompatActivity {
 
@@ -20,6 +23,5 @@ public class EmployeeActivity extends AppCompatActivity {
             Intent intent = new Intent(EmployeeActivity.this,Schedule.class);
             startActivity(intent);
         });
-
     }
 }

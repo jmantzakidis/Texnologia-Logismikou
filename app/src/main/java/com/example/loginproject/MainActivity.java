@@ -33,6 +33,7 @@ public class MainActivity extends AppCompatActivity {
     @SuppressLint("SetTextI18n")
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+        setTitle("Login Menu");
         setContentView(R.layout.activity_main);
         Util context = new Util();
         context.setContext(getApplicationContext());
