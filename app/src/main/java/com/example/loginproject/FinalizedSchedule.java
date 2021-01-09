@@ -2,6 +2,7 @@ package com.example.loginproject;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.widget.Toast;
 
@@ -22,7 +23,6 @@ public class FinalizedSchedule extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_finalized_schedule);
-
 
         DataParser dataParser = new DataParser();
         Util util = new Util();
@@ -66,6 +66,8 @@ public class FinalizedSchedule extends AppCompatActivity {
         int avg = 0;
         int median;
 
+
+
         if(userData.size() % 2 == 0){
             median = userData.size()/2;
         }else
@@ -105,13 +107,6 @@ public class FinalizedSchedule extends AppCompatActivity {
                         }
                     }
                 }
-//                else{
-//                    for(UserData user1 : userData){
-//                        if(shift.employeeName.equals(user1.name +" "+ user1.surName)){
-//                            user1.daysWorked += 1;
-//                        }
-//                    }
-//                }
             }
             int sum = 0;
             for(UserData user1 : userData){
@@ -138,10 +133,8 @@ public class FinalizedSchedule extends AppCompatActivity {
         } catch (JSONException e) {
             e.printStackTrace();
         }
-//        for(WorkDay day : days){
-//            for(Shift shift : day.shifts) {
-//                System.out.println("Day = " + day.day + " Shift = " + shift.shift + " Employee = " + shift.employeeName);
-//            }
-//        }
+        Toast.makeText(Util.context,"You've successfully generated the Weekly Program",Toast.LENGTH_SHORT).show();
+        Intent intent = new Intent(FinalizedSchedule.this,BossActivity.class);
+        startActivity(intent);
     }
 }

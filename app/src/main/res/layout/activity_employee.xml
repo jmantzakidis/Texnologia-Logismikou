@@ -7,6 +7,32 @@
     android:background="@color/light_pink"
     tools:context=".EmployeeActivity">
 
+    <!--    <Button-->
+<!--        android:id="@+id/emException"-->
+<!--        android:layout_width="wrap_content"-->
+<!--        android:layout_height="wrap_content"-->
+<!--        android:text="Exceptions"-->
+<!--        app:backgroundTint="@color/teal_700"-->
+<!--        app:layout_constraintBottom_toBottomOf="parent"-->
+<!--        app:layout_constraintEnd_toEndOf="parent"-->
+<!--        app:layout_constraintHorizontal_bias="0.457"-->
+<!--        app:layout_constraintStart_toStartOf="parent"-->
+<!--        app:layout_constraintTop_toTopOf="parent"-->
+<!--        app:layout_constraintVertical_bias="0.263" />-->
+
+    <Button
+        android:id="@+id/emViewCompleteSchedule"
+        android:layout_width="120dp"
+        android:layout_height="wrap_content"
+        android:text="View Schedule"
+        app:backgroundTint="@color/teal_700"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.446"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.241" />
+
     <Button
         android:id="@+id/emExit"
         android:layout_width="120dp"
@@ -18,39 +44,13 @@
         app:layout_constraintHorizontal_bias="0.446"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.527" />
-
-    <Button
-        android:id="@+id/emException"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Exceptions"
-        app:backgroundTint="@color/teal_700"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.446"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.399" />
-
-    <Button
-        android:id="@+id/emLeave"
-        android:layout_width="120dp"
-        android:layout_height="wrap_content"
-        android:text="Leave"
-        app:backgroundTint="@color/teal_700"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.446"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.272" />
+        app:layout_constraintVertical_bias="0.339" />
 
     <Button
         android:id="@+id/emView"
         android:layout_width="120dp"
         android:layout_height="wrap_content"
-        android:text="View"
+        android:text="Apply for Shift"
         app:backgroundTint="@color/teal_700"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"

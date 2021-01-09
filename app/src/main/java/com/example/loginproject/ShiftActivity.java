@@ -25,7 +25,7 @@ public class ShiftActivity extends AppCompatActivity {
 
         RecyclerView shiftData = findViewById(R.id.shiftData);
 
-        
+        setTitle(days.get(p).day);
         ShiftAdapter adapter = new ShiftAdapter(shifts,days,p);
         shiftData.setAdapter(adapter);
         shiftData.setLayoutManager(new LinearLayoutManager(this));

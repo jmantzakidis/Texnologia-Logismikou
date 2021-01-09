@@ -48,7 +48,7 @@ public class ViewEmployeeAdapter extends RecyclerView.Adapter<ViewEmployeeAdapte
         TextView textViewSurname = holder.tv_surname;
         textViewSurname.setText(userData.surName);
         TextView textViewContract = holder.tv_contract;
-        textViewContract.setText(" " +" "+" "+ " " +" " + userData.contract);
+        textViewContract.setText(" " +" "+" "+ " " +" " + userData.daysWorked*8 + " hours worked");
     }
 
     @Override
@@ -69,7 +69,6 @@ public class ViewEmployeeAdapter extends RecyclerView.Adapter<ViewEmployeeAdapte
             tv_surname = itemView.findViewById(R.id.userDataSurname);
         }
     }
-
 }
 
 

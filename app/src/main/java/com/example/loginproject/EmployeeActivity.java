@@ -11,7 +11,7 @@ import java.util.ArrayList;
 
 public class EmployeeActivity extends AppCompatActivity {
 
-    Button scheduleView;
+    Button scheduleView,viewSchedule,exitButton;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -19,6 +19,18 @@ public class EmployeeActivity extends AppCompatActivity {
         setTitle("Employee Activity");
         setContentView(R.layout.activity_employee);
         scheduleView = findViewById(R.id.emView);
+        exitButton = findViewById(R.id.emExit);
+        viewSchedule = findViewById(R.id.emViewCompleteSchedule);
+
+        viewSchedule.setOnClickListener(v -> {
+            Intent intent = new Intent(EmployeeActivity.this,ViewSchedule.class);
+            startActivity(intent);
+        });
+
+        exitButton.setOnClickListener(v -> {
+            finish();
+            System.exit(0);
+        });
         scheduleView.setOnClickListener(v -> {
             Intent intent = new Intent(EmployeeActivity.this,Schedule.class);
             startActivity(intent);

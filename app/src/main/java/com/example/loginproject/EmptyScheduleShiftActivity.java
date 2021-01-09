@@ -58,6 +58,8 @@ public class EmptyScheduleShiftActivity extends AppCompatActivity {
 
         });
 
+        setTitle(days.get(p).day);
+
         EmptyScheduleShiftAdapter adapter = new EmptyScheduleShiftAdapter(shifts,days,p);
         shiftData.setAdapter(adapter);
         shiftData.setLayoutManager(new LinearLayoutManager(this));

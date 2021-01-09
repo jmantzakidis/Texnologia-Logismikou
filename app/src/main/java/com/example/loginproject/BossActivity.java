@@ -9,7 +9,7 @@ import android.widget.Button;
 
 public class BossActivity extends AppCompatActivity {
 
-    Button hireButton,fireButton,createEmptySchedule,viewSchedule,viewEmployees,finalizeSchedule;
+    Button hireButton,fireButton,createEmptySchedule,viewSchedule,viewEmployees,finalizeSchedule,exitButton;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -22,13 +22,19 @@ public class BossActivity extends AppCompatActivity {
         viewEmployees = findViewById(R.id.viewEmployees);
         viewSchedule = findViewById(R.id.ViewSchedule);
         finalizeSchedule = findViewById(R.id.FinalizeSchedule);
+        exitButton = findViewById(R.id.Exit);
 
 
+        exitButton.setOnClickListener(v -> {
+            finish();
+            System.exit(0);
+        });
 
         finalizeSchedule.setOnClickListener(v -> {
             Intent intent = new Intent(BossActivity.this,FinalizedSchedule.class);
             startActivity(intent);
         });
+
 
         fireButton.setOnClickListener(v -> {
             Intent intent = new Intent(BossActivity.this,Fire.class);

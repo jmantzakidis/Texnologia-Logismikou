@@ -29,6 +29,7 @@ public class MainActivity extends AppCompatActivity {
 
     HashMap<String,String> userNamePassword = new HashMap<>();
     HashMap<String,UserData> userNameUserData = new HashMap<>();
+
     @Override
     @SuppressLint("SetTextI18n")
     protected void onCreate(Bundle savedInstanceState) {

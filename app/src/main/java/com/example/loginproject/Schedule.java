@@ -3,6 +3,8 @@ package com.example.loginproject;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
+
+import android.content.Intent;
 import android.os.Bundle;
 import org.json.JSONException;
 import java.io.IOException;
@@ -21,6 +23,7 @@ public class Schedule extends AppCompatActivity {
         }
         setContentView(R.layout.activity_schedule);
         setTitle("Weekly Program");
+
         String JsonData = null;
         try {
             JsonData = u.jsonLoader(Util.shiftsDirectory,Util.shiftsFileName);

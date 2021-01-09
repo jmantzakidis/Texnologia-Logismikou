@@ -39,6 +39,7 @@ public class ViewScheduleShiftActivity extends AppCompatActivity {
             e.printStackTrace();
         }
 
+        setTitle(days.get(p).day);
         ViewScheduleShiftAdapter adapter = new ViewScheduleShiftAdapter(shifts,days,p,data);
         shiftData.setAdapter(adapter);
         shiftData.setLayoutManager(new LinearLayoutManager(this));

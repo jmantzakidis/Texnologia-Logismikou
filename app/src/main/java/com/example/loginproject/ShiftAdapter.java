@@ -19,6 +19,7 @@ import java.util.ArrayList;
 
 public class ShiftAdapter extends RecyclerView.Adapter<ShiftAdapter.ViewHolder> {
 
+    private  ArrayList<UserData> data;
     private ArrayList<Shift> shifts;
     private ArrayList<WorkDay> days;
     private int p;
@@ -67,10 +68,43 @@ public class ShiftAdapter extends RecyclerView.Adapter<ShiftAdapter.ViewHolder> 
                     Toast.makeText(Util.context,Restrictions.SAME_DAY_MESSAGE,Toast.LENGTH_SHORT).show();
                     return;
             }
+
 //            if(!restriction.checkDays(p,days,days.get(p).shifts.get(position).shift))
 //            {
 //                return;
 //            }
+            Util.currentUser.daysWorked +=1;
+
+            Util util =new Util();
+
+            DataParser dataParser = new DataParser();
+            try {
+                data = dataParser.parseUserData(util.jsonLoader(Util.directory,Util.fileName));
+            } catch (JSONException e) {
+                e.printStackTrace();
+            } catch (IOException e) {
+                e.printStackTrace();
+            }
+            int counter = 0;
+            for(UserData user : data){
+                if(user.userName.equals(Util.currentUser.userName)){
+                    break;
+                }
+                counter +=1;
+            }
+            data.set(counter,Util.currentUser);
+
+
+            DataWriter dataWriter1 = new DataWriter(Util.directory,Util.fileName);
+            try {
+                dataWriter1.writeToJson(data);
+            } catch (IOException e) {
+                e.printStackTrace();
+            } catch (JSONException e) {
+                e.printStackTrace();
+            }
+
+
             shifts.get(position).employeeName = Util.currentUser.name + " " +Util.currentUser.surName;
             days.get(p).shifts = shifts;
             DataWriter dataWriter = new DataWriter(Util.shiftsDirectory,Util.shiftsFileName);
