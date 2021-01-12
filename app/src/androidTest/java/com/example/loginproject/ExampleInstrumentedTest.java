@@ -1,4 +1,4 @@
-package com.example.project_texnologia_logismikou;
+package com.example.loginproject;
 
 import android.content.Context;
 
