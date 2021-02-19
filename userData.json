@@ -1,0 +1,74 @@
+{
+    "Registrations": [
+        {
+            "name": "Thodoris",
+            "surName": "Gewrgiou",
+            "email": "gewrgiouteo@hotmail.com",
+            "userName": "teo",
+            "mobile": "6972981516",
+            "password": "123456",
+            "specialty": "Electrician",
+            "contract": "Full-Time"
+        },
+        {
+            "name": "Giannis",
+            "surName": "Aulogiaris",
+            "email": "giannis@hotmail.com",
+            "userName": "giannis",
+            "mobile": "6954151561",
+            "password": "123456",
+            "specialty": "Mechanic",
+            "contract": "Full-Time"
+        },
+        {
+            "name": "Giannis",
+            "surName": "Giannakopoulos",
+            "email": "dsjnfjsd@hotmail.com",
+            "userName": "Giannakopoulos",
+            "mobile": "6951515156",
+            "password": "123456",
+            "specialty": "Electrician",
+            "contract": "Full-Time"
+        },
+        {
+            "name": "Aggelos",
+            "surName": "Trentsios",
+            "email": "fsdnfks@hotmail.com",
+            "userName": "Trentsios",
+            "mobile": "6951561561",
+            "password": "123456",
+            "specialty": "Plumber",
+            "contract": "Full-Time"
+        },
+        {
+            "name": "Xrhstos",
+            "surName": "Markou",
+            "email": "fdsnjfs@hotmail.com",
+            "userName": "markou",
+            "mobile": "6915161615",
+            "password": "123456",
+            "specialty": "Plumber",
+            "contract": "Full-Time"
+        },
+        {
+            "name": "Giannis",
+            "surName": "Mantzakidis",
+            "email": "fhnsdkj@hotmail.com",
+            "userName": "mantzakidis",
+            "mobile": "6915615644",
+            "password": "123456",
+            "specialty": "Plumber",
+            "contract": "Full-Time"
+        },
+        {
+            "name": "Manuel",
+            "surName": "Kuci",
+            "email": "fgdsfgfd@hotmail.com",
+            "userName": "kuci",
+            "mobile": "6915154146",
+            "password": "123456",
+            "specialty": "Plumber",
+            "contract": "Full-Time"
+        }
+    ]
+}

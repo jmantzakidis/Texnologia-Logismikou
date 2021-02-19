@@ -1,0 +1,138 @@
+{
+    "Week": [
+        {
+            "Day": "Monday",
+            "Shifts": [
+                {
+                    "time": "morning",
+                    "employee": "",
+                    "status": "pending"
+                },
+                {
+                    "time": "morning",
+                    "employee": "",
+                    "status": "pending"
+                },
+                {
+                    "time": "afternoon",
+                    "employee": "",
+                    "status": "pending"
+                },
+                {
+                    "time": "night",
+                    "employee": "",
+                    "status": "pending"
+                }
+            ]
+        },
+        {
+            "Day": "Tuesday",
+            "Shifts": [
+                {
+                    "time": "morning",
+                    "employee": "",
+                    "status": "pending"
+                },
+                {
+                    "time": "afternoon",
+                    "employee": "",
+                    "status": "pending"
+                },
+                {
+                    "time": "afternoon",
+                    "employee": "",
+                    "status": "pending"
+                },
+                {
+                    "time": "afternoon",
+                    "employee": "",
+                    "status": "pending"
+                },
+                {
+                    "time": "night",
+                    "employee": "",
+                    "status": "pending"
+                }
+            ]
+        },
+        {
+            "Day": "Wednesday",
+            "Shifts": [
+                {
+                    "time": "morning",
+                    "employee": "",
+                    "status": "pending"
+                },
+                {
+                    "time": "morning",
+                    "employee": "",
+                    "status": "pending"
+                },
+                {
+                    "time": "morning",
+                    "employee": "",
+                    "status": "pending"
+                },
+                {
+                    "time": "afternoon",
+                    "employee": "",
+                    "status": "pending"
+                },
+                {
+                    "time": "afternoon",
+                    "employee": "",
+                    "status": "pending"
+                }
+            ]
+        },
+        {
+            "Day": "Thursday",
+            "Shifts": [
+                {
+                    "time": "morning",
+                    "employee": "",
+                    "status": "pending"
+                },
+                {
+                    "time": "morning",
+                    "employee": "",
+                    "status": "pending"
+                },
+                {
+                    "time": "morning",
+                    "employee": "",
+                    "status": "pending"
+                },
+                {
+                    "time": "night",
+                    "employee": "",
+                    "status": "pending"
+                },
+                {
+                    "time": "night",
+                    "employee": "",
+                    "status": "pending"
+                }
+            ]
+        },
+        {
+            "Day": "Friday",
+            "Shifts": [
+                {
+                    "time": "morning",
+                    "employee": "",
+                    "status": "pending"
+                },
+                {
+                    "time": "morning",
+                    "employee": "",
+                    "status": "pending"
+                }
+            ]
+        },
+        {
+            "Day": "Saturday",
+            "Shifts": []
+        }
+    ]
+}
